@@ -68,7 +68,6 @@ createuser({firstName:'',emails:'',isActivated:true})
 
 
 
-*/
 
 
 type User={
@@ -90,12 +89,58 @@ let myUser:User={
 }
 
 myUser.email='newemail@.com'
-myUser._id='43fds'
+
 
 myUser.name='newName'
 myUser.isActive=false
 
 console.log(myUser);
+
+
+
+*/
+
+
+
+///combine multiple types
+
+
+
+
+type cardNumber={
+
+    cardNum:string
+}
+
+
+type cardData={
+
+    cardHolderName:string,
+}
+
+
+type cardDetails=cardNumber & cardData & {
+
+    cvv:number
+}
+
+
+
+function getCardDetails(details:cardDetails):cardDetails{
+
+    return details;
+
+}
+
+let res=getCardDetails({cardNum:'1234',cardHolderName:'Akshay',cvv:123})
+
+
+console.log(res);
+
+
+
+
+
 
 
 export{}
