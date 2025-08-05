@@ -1,3 +1,4 @@
+"use strict";
 /*
  
 const user={
@@ -69,33 +70,13 @@ createuser({firstName:'',emails:'',isActivated:true})
 
 
 */
-
-
-type User={
-    readonly _id:string
-    name:string,
-    email:string,
-    isActive:boolean,
-    credintials?:number
-
-}
-
-
-let myUser:User={
-
-   _id:'12345',
-    name:'akki',
-    email:"ssf@.com",
-    isActive:true,
-}
-
-myUser.email='newemail@.com'
-myUser._id='43fds'
-
-myUser.name='newName'
-myUser.isActive=false
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var myUser = {
+    name: 'akki',
+    email: "ssf@.com",
+    isActive: true,
+};
+myUser.email = 'newemail@.com';
+myUser.name = 'newName';
+myUser.isActive = false;
 console.log(myUser);
-
-
-export{}
